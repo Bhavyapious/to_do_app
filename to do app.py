@@ -22,21 +22,21 @@ def delete_task():
     except:
         tkinter.messagebox.showwarning(title="Warning", message="You must select a task")
 
-def load_task():
-    try:
+# def load_task():
+#     try:
+#
+#         tasks=pickle.load(open("tasks.date"," rb"))
+#         Listbox_task.delete((0,tkinter.END))
+#         for task in tasks:
+#               Listbox_task.insert((tkinter.END,task))
+#
+#     except:
+#         tkinter.messagebox.showwarning(title="Warning", message="Can not find tasks.dat")
 
-        tasks=pickle.load(open("tasks.date"," rb"))
-        Listbox_task.delete((0,tkinter.END))
-        for task in tasks:
-              Listbox_task.insert((tkinter.END,task))
 
-    except:
-        tkinter.messagebox.showwarning(title="Warning", message="Can not find tasks.dat")
-
-
-def save_task():
-    tasks=Listbox_task.get(0,Listbox_task.size())
-    pickle.dump(tasks,open("tasks.dat","wb"))
+# def save_task():
+#     tasks=Listbox_task.get(0,Listbox_task.size())
+#     pickle.dump(tasks,open("tasks.dat","wb"))
 
 Frame_task=tkinter.Frame(root)
 Frame_task.pack()
@@ -59,11 +59,11 @@ button_add_task.pack()
 button_delete_task=tkinter.Button(root,text="Delete tasks",width=40,command=delete_task)
 button_delete_task.pack()
 
-button_save_task=tkinter.Button(root,text="Save tasks",width=40,command=save_task)
-button_save_task.pack()
-
-button_load_task=tkinter.Button(root,text="Load tasks",width=40,command=load_task)
-button_load_task.pack()
+# button_save_task=tkinter.Button(root,text="Save tasks",width=40,command=save_task)
+# button_save_task.pack()
+#
+# button_load_task=tkinter.Button(root,text="Load tasks",width=40,command=load_task)
+# button_load_task.pack()
 
 
 
